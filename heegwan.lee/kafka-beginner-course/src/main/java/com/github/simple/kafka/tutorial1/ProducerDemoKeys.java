@@ -28,8 +28,8 @@ public class ProducerDemoKeys {
 
             String topic = "first_topic";
             String value = "hello world " + i;
-            //String key = "id_" + Integer.toString(i);
-            String key = "id_0";
+            String key = "id_" + Integer.toString(i);
+            //String key = "id_0";
 
             ProducerRecord<String, String> record =
                     new ProducerRecord<String, String>("first_topic", key, value);
