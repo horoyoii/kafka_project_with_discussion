@@ -1,4 +1,4 @@
-package com.github.yunhojung.kafka.tutorial2;
+package kafka.tutorial2;
 
 import com.google.common.collect.Lists;
 import com.twitter.hbc.ClientBuilder;
@@ -15,7 +15,10 @@ import org.apache.kafka.common.serialization.StringSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.BlockingQueue;
@@ -29,7 +32,7 @@ public class TwitterProducer {
     String consumerSecret;
     String token;
     String secret;
-    List<String> terms = Lists.newArrayList("kafka");
+    List<String> terms = Lists.newArrayList("kafka", "usa", "politics", "sport", "soccer");
 
     public TwitterProducer(){
         try {
