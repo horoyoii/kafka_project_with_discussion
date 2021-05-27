@@ -88,7 +88,6 @@ public class ElasticSearchConsumer {
         properties.setProperty(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false"); // disable auto commit of offsets
         properties.setProperty(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, "100"); // disable auto commit of offsets
 
-
         // create consumer
         KafkaConsumer<String, String> consumer = new KafkaConsumer<String ,String>(properties);
         consumer.subscribe(Arrays.asList(topic));
@@ -155,7 +154,6 @@ public class ElasticSearchConsumer {
                 }
             }
         }
-
         // close the client gracefully
 //        client.close();
     }
